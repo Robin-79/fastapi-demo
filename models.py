@@ -64,3 +64,12 @@ class User(SQLModel, table=True):
     bio: str = Field()
     created_at: datetime = Field()
     updated_at: datetime = Field()
+
+class Menu(SQLModel, table=True):
+    __tablename__ = "menus"
+
+    id: int | None = Field(default=None, primary_key=True)
+    title: str = Field()
+    url: str = Field()
+    
+
