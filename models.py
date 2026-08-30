@@ -50,3 +50,12 @@ class Genre(SQLModel, table=True):
     description: str = Field()
     created_at: datetime = Field()
     update_at: datetime = Field()
+
+class Menu(SQLModel, table=True):
+    __tablename__ = "menus"
+
+    id: int | None = Field(default=None, primary_key=True)
+    title: str = Field()
+    url: str = Field()
+    
+        
