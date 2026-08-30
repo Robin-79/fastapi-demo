@@ -51,6 +51,20 @@ class Genre(SQLModel, table=True):
     created_at: datetime = Field()
     update_at: datetime = Field()
 
+class User(SQLModel, table=True):
+    __tablename__ = "users"
+
+    id: int | None = Field(default=None, primary_key=True)
+    fullname: str = Field()
+    email: str = Field()
+    username: str = Field()
+    phone: int = Field()
+    password: str = Field()
+    profile_image: str = Field()
+    bio: str = Field()
+    created_at: datetime = Field()
+    updated_at: datetime = Field()
+
 class Menu(SQLModel, table=True):
     __tablename__ = "menus"
 
@@ -58,4 +72,4 @@ class Menu(SQLModel, table=True):
     title: str = Field()
     url: str = Field()
     
-        
+
