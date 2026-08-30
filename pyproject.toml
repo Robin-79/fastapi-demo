@@ -5,6 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 authors = [
     { name = "riyabote237-ui", email = "riyabote237@gmail.com" }
+    { name = "Apsara Shrestha", email = "apsarashrestha651@gmail.com" }
+    { name = "arnimabasnet32-a11y", email = "arnimabasnet32@gmail.com" }
 ]
 requires-python = ">=3.14"
 dependencies = [
@@ -12,7 +14,6 @@ dependencies = [
     "pymysql>=1.2.0",
     "sqlmodel>=0.0.39",
 ]
-
 
 [project.scripts]
 fastapi-demo = "fastapi_demo:main"
