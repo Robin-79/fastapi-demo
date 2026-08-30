@@ -4,8 +4,8 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
-    { name = "riyabote237-ui", email = "riyabote237@gmail.com" }
-    { name = "Apsara Shrestha", email = "apsarashrestha651@gmail.com" }
+    { name = "riyabote237-ui", email = "riyabote237@gmail.com" },
+    { name = "Apsara Shrestha", email = "apsarashrestha651@gmail.com" },
     { name = "arnimabasnet32-a11y", email = "arnimabasnet32@gmail.com" }
 ]
 requires-python = ">=3.14"
