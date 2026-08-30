@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from db import create_db_and_tables
-from routers import categories, animes, genres, anime_casts
+from routers import categories, animes, genres, anime_casts, reviews
 
 app = FastAPI()
 
@@ -17,3 +17,4 @@ app.include_router(categories.router)
 app.include_router(animes.router)
 app.include_router(genres.router)
 app.include_router(anime_casts.router)
+app.include_router(reviews.router)
