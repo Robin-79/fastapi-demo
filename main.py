@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from db import create_db_and_tables
-from routers import categories, animes, genres, anime_casts, menus, users, reviews
+from routers import categories, animes, genres, anime_casts, menus, users, reviews, sliders
 
 app = FastAPI()
 
@@ -29,3 +29,4 @@ app.include_router(anime_casts.router)
 app.include_router(reviews.router)
 app.include_router(users.router)
 app.include_router(menus.router)
+app.include_router(sliders.router)
