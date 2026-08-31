@@ -82,3 +82,13 @@ class Menu(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     title: str = Field()
     url: str = Field()
+
+class Slider(SQLModel, table=True):
+    __tablename__ = "sliders"
+
+    id: int | None = Field(default=None, primary_key=True)
+    image: str = Field()
+    title: str = Field()
+    details: str = Field()
+    url: str = Field()
+    button_label: str = Field()
