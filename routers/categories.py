@@ -23,18 +23,20 @@ async def save_category(cat: Category, session: SessionDep) -> Category:
     session.refresh(cat)
     return cat
 
-@router.get("/categories/{id}")
-async def show_category(id: int, session: SessionDep) -> Category:
-    category = session.get(Category, id)
+@router.get("/categories/{slug}")
+async def show_category(slug: str, session: SessionDep) -> Category:
+    statement = select(Category).where(Category.slug == slug)
+    result = session.exec(statement)
+    category = result.first() # Returns None if not found
     if not category:
-        raise HTTPException(status_code=404, detail="Hero not found")
+        raise HTTPException(status_code=404, detail="Category not found")
     return category
 
 @router.delete("/categories/{id}")
 async def delete_category(id: int, session: SessionDep):
     category = session.get(Category, id)
     if not category:
-        raise HTTPException(status_code=404, detail="Hero not found")
+        raise HTTPException(status_code=404, detail="Category not found")
     session.delete(category)
     session.commit()
     return {"ok": True}
