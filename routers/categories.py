@@ -2,7 +2,7 @@ from typing import Sequence, Annotated
 from fastapi import APIRouter, HTTPException, Query
 from sqlmodel import select
 from db import SessionDep
-from models import Category
+from models import Category, Content
 
 router = APIRouter()
 

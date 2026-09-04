@@ -10,12 +10,13 @@ class Category(SQLModel, table=True):
     description: str = Field()
 
 
-class Anime(SQLModel, table=True):
-    __tablename__ = "anime"
+class Content(SQLModel, table=True):
+    __tablename__ = "contents"
 
     id: int | None = Field(default=None, primary_key=True)
     title: str = Field()
     slug: str = Field()
+    category_id: int = Field(foreign_key="categories.id")
     description: str = Field()
     poster_image: str = Field()
     release_date: datetime = Field()
@@ -26,7 +27,7 @@ class Anime(SQLModel, table=True):
     country: str = Field()
     director: str = Field()
     created_at: datetime = Field()
-    update_at: datetime = Field()
+    updated_at: datetime = Field()
 
 class AnimeCast(SQLModel, table=True):
     __tablename__ = "anime_casts"
