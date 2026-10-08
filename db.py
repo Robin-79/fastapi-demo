@@ -2,7 +2,7 @@ from typing import Annotated
 from fastapi import Depends
 from sqlmodel import SQLModel, create_engine, Session
 
-DATABASE_URL = "mysql+pymysql://root:@localhost:3306/aksaria"
+DATABASE_URL = "mysql+pymysql://root:Euphoria$789@localhost:3306/aksaria"
 
 engine = create_engine(DATABASE_URL)
 
